@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            menghitung luas dan keliling persegi 
+        </title>
+
+        <style> 
+            body
+            {
+                background-color: rgb(87, 27, 199);
+            }
+            h3
+            {
+                text-align: center;
+            }
+            div
+            {
+                margin: auto;
+                width: 400px;
+            }
+            table
+            {
+                border-style: none;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th
+            {
+                background-color: rgb(27, 226, 126);
+                border: none;
+                font-size: 15px;
+                font-family: cursive;
+                padding: 10px;
+                color: white;
+            }
+            td
+            {
+                color:rgb(17, 238, 109);
+                font-family: cursive;
+                border: none;
+            }
+            input[type=text]
+            {
+                padding: 10px;
+                width: 380px;
+                height: 10px;
+                border-style:solid;
+                border-color:grey;
+                font-size: 16px;
+
+            }
+            input[type=text]:disabled
+            {
+                background-color: rgb(23, 228, 159);
+            }
+            button
+            {
+                background-color: rgb(52, 252, 52);
+                width: 100%;
+                height: 30px;
+                color:rgb(211, 25, 56);
+                border:none;
+                font-size: 17px;
+                cursor:pointer;
+            }
+            
+        </style>
+
+        <script type="text/javascript">
+            function hitung()
+            {
+                var luas,keliling,panjang,lebar;
+
+                panjang=parseInt(document.getElementById("panjang persegi").value);
+                lebar=parseInt(document.getElementById("lebar persegi").value);
+
+                 keliling=2 *(panjang*lebar);
+                 luas= panjang*lebar;
+                 
+                 document.getElementById("keliling").value=keliling;
+                 document.getElementById("luas").value=luas;
+            }
+            function hapus()
+            {
+                document.getElementById("keliling").value="";
+                document.getElementById("luas").value="";
+                document.getElementById("lebar persegi").value="";
+                document.getElementById("panjang persegi").value="";
+            }
+        </script>
+    
+
+    </head>
+    <body>
+        <h3>Menghitung luas dan keliling persegi panjang</h3>
+        
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>persegi panjang</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>masukan lebar persegi panjang</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="lebar persegi"></td>
+                    </tr>
+                    <tr>
+                        <td>masukan panjang persegi panjang</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="panjang persegi"> </td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="hitung()">hitung</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>luas persegi panjang</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="luas" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>keliling persegi panjang</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="keliling" disabled></td>
+                    </tr>
+
+                </tfoot>
+            </table>
+        </div>
+    </body>
+</html>
